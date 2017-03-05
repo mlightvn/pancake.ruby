@@ -16,8 +16,44 @@
   </head>
 
   <body>
+<div class="w3-container">
+<div class="w3-header">
+<a href="/"><img class="lazy" data-original="https://coxanh.net/common/image/logo-70x70.png" alt="logo"></a>
+<span class="w3-text-black w3-large">Be a full-stack engineer.</span>
+</div>
+<div style="margin-top: 3px;margin-bottom: 3px;" class=" w3-border-top w3-border-red"></div>
+<ul class="r10-menu w3-navbar w3-red" id="r10-menu">
+<li><a href="https://coxanh.net/" class="w3-text-white"><span class="glyphicon glyphicon-home"></span></a></li>
+<li><a href="https://coxanh.net/l-mongodb" class="w3-text-white">MongoDB</a></li>
+<li><a href="https://coxanh.net/l-php-apache" class="w3-text-white">PHP / Apache</a></li>
+<li><a href="https://coxanh.net/l-mysql-mariadb" class="w3-text-white">MySql / MariaDB</a></li>
+<li><a href="https://coxanh.net/l-linux-centos" class="w3-text-white">Linux / CentOS</a></li>
+<li><a href="https://coxanh.net/l-server-network" class="w3-text-white">Server/Network</a></li>
+<li><a href="https://coxanh.net/l-laravel-5" class="w3-text-white">Laravel 5</a></li>
+<li><a href="https://coxanh.net/l-adobe-illustrator" class="w3-text-white">Adobe Illustrator</a></li>
+<li><a href="https://coxanh.net/l-ios-android" class="w3-text-white">iOS / Android</a></li>
+<li><a href="https://coxanh.net/l-nodejs" class="w3-text-white">Node JS</a></li>
+<li><a href="https://coxanh.net/l-ruby-and-ruby-on-rails" class="w3-text-white">Ruby &amp; Ruby on Rails</a></li>
+<li><a href="https://coxanh.net/logo" class="w3-hover-green w3-light-grey">Logo</a></li>
+<li><a href="javascript:void(0);" onclick="javascript:window.open('http://blog.coxanh.net', '_blank');" class="w3-hover-green w3-light-grey">Blog</a></li>
+<li><a href="https://www.paypal.me/ngocnam" class="w3-hover-green w3-purple" target="_blank">Buy me <span class="glyphicon glyphicon-apple"></span></a></li>
+<li class="icon"><a href="javascript:void(0);" onclick="showMenuIcon()" class="w3-text-white">☰</a></li>
+</ul>
+<div style="margin-top: 3px;margin-bottom: 3px;" class=" w3-border-top w3-border-red"></div>
+<div class="w3-container">
+<div class="w3-row w3-col s12 m12 l12">
     <%= yield %>
+</div>
+</div>
 <br>
+<script data-rocketsrc="https://coxanh.net/common/js/jquery.lazyload.min.js" type="text/rocketscript"></script>
+<script type="text/rocketscript">
+$(function() {
+    $("img.lazy").lazyload({
+      effect : "fadeIn"
+  });
+});
+</script>
 <div style="margin-top: 3px;margin-bottom: 3px;" class="w3-border-bottom w3-border-black"></div>
 <div class="r10-footer">
   <div class="w3-row">
