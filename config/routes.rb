@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+  get 'admin/post' => 'admin_post#index'
+  get 'admin/post/index' => 'admin_post#index'
+
+  get 'admin/post/new'
+  post 'admin/post/create'
+  get 'admin/post/:id' => 'admin_post#detail'
+  get 'admin/post/:id/edit' => 'admin_post#edit'
+  patch 'admin/post/:id' => 'admin_post#update'
+  delete 'admin/post/:id' => 'admin_post#destroy'
+
   # get 'posts/detail'
 
   get 'posts/list'
-  get 'posts/new'
-  post 'posts/create'
-  get 'posts/:id' => 'posts#detail'
-  get 'posts/:id/edit' => 'posts#edit'
-  patch 'posts/:id' => 'posts#update'
-  delete 'posts/:id' => 'posts#destroy'
 
   get 'user/post'
 

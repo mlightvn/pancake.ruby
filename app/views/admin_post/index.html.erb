@@ -1,5 +1,6 @@
-<h1>Posts#list</h1>
-<br>
+<h1>Admin &gt; Post &gt; list</h1>
+<a href="/admin/posts/new">New post</a>
+<br><br>
 <% if @posts.blank? %>
 	<h4>There are no post.</h4>
 <% else %>
@@ -7,13 +8,20 @@
 	<thead class="w3-red">
 		<td>Title</td>
 		<td>Content</td>
+		<td></td>
+		<td></td>
 	</thead>
 	<% @posts.each do |post| %>
 	<tr>
 		<td><a href="<%= post.id %>"><%= post.title %></a></td>
 		<td><%= post.content.gsub(/(?:\n\r?|\r\n?)/, '<br>').html_safe %></td>
+		<td><a href="<%= post.id %>/edit">Edit</a></td>
+		<td>
+			<%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete, data: { confirm: 'Are you sure to delete?' }, :title => "Delete #{post.id}" %>
+		</td>
 	</tr>
 	<% end %>
 </table>
 <% end %>
-
+<br>
+<a href="/admin/posts/new">New post</a>
