@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   patch 'admin/post/:id' => 'admin_post#update'
   delete 'admin/post/:id' => 'admin_post#destroy'
 
+  get 'posts' => 'posts#list'
   get 'posts/list'
   get 'posts/:id' => 'posts#detail'
 end
